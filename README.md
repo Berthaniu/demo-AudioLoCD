@@ -1,11 +1,6 @@
-## Target Confusion in End-to-end Speaker Extraction: Analysis and Approaches
+## AudioLoCD: An Efficient Conditional Discrete Latent Diffusion Model for Text-to-Audio Generation
 
 ### About 
 
-This is a [demo](https://zhazhafon.github.io/demo-confusion/) for our paper '_Target Confusion in End-to-end Speaker Extraction: Analysis and Approaches_'. Check [https://zhazhafon.github.io/demo-confusion/](https://zhazhafon.github.io/demo-confusion/) for details.
+This is a [demo](https://Berthaniu.github.io/demo-AudioLoCD/) for our paper '_AudioLoCD: An Efficient Conditional Discrete Latent Diffusion Model for Text-to-Audio Generation_'.
 
-### News
-
-* 2022-09-08 Updated materials for INTERSPEECH 2022
-* 2022-06-15 Paper accepted by INTERSPEECH 2022
-* 2022-04-15 Paper available on arXiv
