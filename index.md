@@ -8,20 +8,21 @@
 
 ## Abstract
 We present the AudioLoCD, a novel text-to-audio (TTA) generation framework, which incorporates a LoRA-based conditional discrete contrastive latent diffusion model. Unlike recent large-scale TTA models, our AudioLoCD can be efficiently trained under limited computational resources. The integration of a contrastive learning strategy enhances the connection between textual conditions and the generated audio outputs, resulting in coherent performance. Our experiments demonstrate that AudioLoCD outperforms the baseline with greatly reduced computational resources. Furthermore, a comprehensive ablation study validates the contribution of each component within the AudioLoCD.
-<!-- This is a [demo](https://Berthaniu.github.io/demo-AudioLoCD/) for our paper **_AudioLoCD: An Efficient Conditional Discrete Latent Diffusion Model for Text-to-Audio Generation_**. The AudioLoCD is a text-to-audio (TTA) generation framework, which incorporates a LoRA-based conditional discrete contrastive latent diffusion model.  -->
 
 ## Architecture
-<center><img src="Figure/AudioLoCD.png" width="80%" height="80%" /></center>
 
-## Examples: compare to the baseline method
-### The comprarison between generated sample by AudioLoCD, DiffSound[1] (baseline), and Ground Truth
+TBD
+<!-- <center><img src="Figure/AudioLoCD.png" width="80%" height="80%" /></center> -->
+
+## The comprarison between generated sample by AudioLoCD, DiffSound[1] (baseline), and Ground Truth (Source audio)
+<!-- ### The comprarison between generated sample by AudioLoCD, DiffSound[1] (baseline), and Ground Truth -->
 
 | <center>Text description</center> | <center>AudioLoCD</center> | <center>Diffsound</center> |<center>Ground Truth</center>|
 | :--- | :--- | :--- |
 |Food is frying then a woman speaks|<audio src="sample1/AudioLoCD.wav" controls preload></audio>|<audio src="sample1/DiffSound.wav" controls preload></audio>|<audio src="sample1/GT.wav" controls preload></audio>|
 |Mel-spectrograms|<img src="sample1/AudioLoCD_mel.png" width="60%" height="60%" />|<img src="sample1/DS_mel.png" width="60%" height="60%" />|<img src="sample1/GT_mel.png" width="60%" height="60%" />|
 
-|Speaking following by laughing and clapping|<audio src="sample2/AudioLoCD.wav" controls preload></audio>|<audio src="sample2/DiffSound.wav" controls preload></audio>|<audio src="sample2/GT.wav" controls preload></audio>|
+|Speaking following by laughing and clapping|<audio src="sample2/AudioLoCD2.wav" controls preload></audio>|<audio src="sample2/DiffSound.wav" controls preload></audio>|<audio src="sample2/GT.wav" controls preload></audio>|
 |Mel-spectrograms|<img src="sample2/AudioLoCD_mel.png" width="60%" height="60%" />|<img src="sample2/DS_mel.png" width="60%" height="60%" />|<img src="sample2/GT_mel.png" width="60%" height="60%" />|
 
 |A woman speaks as she rubs two objects together|<audio src="sample3/AudioLoCD.wav" controls preload></audio>|<audio src="sample3/DiffSound.wav" controls preload></audio>|<audio src="sample3/GT.wav" controls preload></audio>|
