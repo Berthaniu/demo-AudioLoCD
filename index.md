@@ -37,7 +37,7 @@ This is a [demo](https://Berthaniu.github.io/demo-AudioLoCD/) for our paper **_A
 |Mel-spectrograms|<img src="sample6/AudioLoCD_mel.png" width="60%" height="60%" />|<img src="sample6/DS_mel.png" width="60%" height="60%" />|<img src="sample6/GT_mel.png" width="60%" height="60%" />|
 
 
-|A grown man speaks as water softly runs|<audio src="sample7/AudioLoCD.wav" controls preload></audio>|<audio src="sample7/DiffSound.wav" controls preload></audio>|<audio src="sample7/GT.wav" controls preload></audio>|
+|Children cry and people talk|<audio src="sample7/AudioLoCD.wav" controls preload></audio>|<audio src="sample7/DiffSound.wav" controls preload></audio>|<audio src="sample7/GT.wav" controls preload></audio>|
 |Mel-spectrograms|<img src="sample7/AudioLoCD_mel.png" width="60%" height="60%" />|<img src="sample7/DS_mel.png" width="60%" height="60%" />|<img src="sample7/GT_mel.png" width="60%" height="60%" />|
 
 
