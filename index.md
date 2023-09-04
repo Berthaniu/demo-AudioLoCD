@@ -7,52 +7,43 @@
 <center> 2 Google DeepMind, Montreal, Canada</center>
 
 ## Introduction
-This is a [demo](https://Berthaniu.github.io/demo-AudioLoCD/) for our paper **_AudioLoCD: An Efficient Conditional Discrete Latent Diffusion Model for Text-to-Audio Generation_**. 
-## Examples
-* **Text input:**
-    _A clock ticktocks continuously_
-    
-| <center>Ground-truth</center> | <center>AudioLoCD</center> | <center>DiffSound</center> |
+This is a [demo](https://Berthaniu.github.io/demo-AudioLoCD/) for our paper **_AudioLoCD: An Efficient Conditional Discrete Latent Diffusion Model for Text-to-Audio Generation_**. The AudioLoCD is a text-to-audio (TTA) generation framework, which incorporates a LoRA-based conditional discrete contrastive latent diffusion model. 
+
+## Architecture
+<center><img src="Figure/AudioLoCD.png" width="80%" height="80%" /></center>
+
+## Examples: compare to the baseline method
+### The comprarison between generated sample by AudioLoCD, DiffSound[1] (baseline), and Ground Truth
+
+| <center>Text description</center> | <center>AudioLoCD</center> | <center>Diffsound</center> |<center>Ground Truth</center>|
 | :--- | :--- | :--- |
-| <audio src="knock/knocking_mel_sample_2.wav" controls="controls">ERROR</audio>|<audio src="knock/knocking_mel_sample_2.wav" controls="controls">ERROR</audio>|  <audio src="knock/knocking_mel_sample_2.wav" controls="controls">ERROR</audio>|
+|Food is frying then a woman speaks|<audio src="sample1/AudioLoCD.wav" controls preload></audio>|<audio src="sample1/DiffSound.wav" controls preload></audio>|<audio src="sample1/GT.wav" controls preload></audio>|
+|Mel-spectrograms|<img src="sample1/AudioLoCD_mel.png" width="60%" height="60%" />|<img src="sample1/DS_mel.png" width="60%" height="60%" />|<img src="sample1/GT_mel.png" width="60%" height="60%" />|
 
-<!-- ### Female - Male Mixtures
+|Speaking following by laughing and clapping|<audio src="sample1/AudioLoCD.wav" controls preload></audio>|<audio src="sample1/DiffSound.wav" controls preload></audio>|<audio src="sample1/GT.wav" controls preload></audio>|
+|Mel-spectrograms|<img src="sample1/AudioLoCD_mel.png" width="60%" height="60%" />|<img src="sample1/DS_mel.png" width="60%" height="60%" />|<img src="sample1/GT_mel.png" width="60%" height="60%" />|
 
-| <center>speech mixture</center> | <center>enrollment utterance</center> | <center>baseline</center> | <center>proposed methods</center> | <center>ground-truth</center> | 
-| :--- | :--- | :--- | :--- | :--- |
-| <audio src="knock/knocking_mel_sample_2.wav" controls="controls">ERROR</audio>|  <audio src="knock/knocking_mel_sample_2.wav" controls="controls">ERROR</audio>|  <audio src="knock/knocking_mel_sample_2.wav" controls="controls">ERROR</audio>|
-|<audio src="wavs/male2female/1320-122617-0035_121-121726-0009.wav" controls preload></audio>|<audio src="wavs/male2female/1320-122612-0010_2094-142345-0048.wav" controls preload></audio>|<audio src="wavs/male2female/baseline/1320-122617-0035_121-121726-0009_s0.wav" controls preload></audio>|<audio src="wavs/male2female/ours/1320-122617-0035_121-121726-0009_s0.wav" controls preload></audio>|<audio src="wavs/male2female/gt/1320-122617-0035_121-121726-0009.wav" controls preload></audio>|
-|<img src="wavs/male2female/1320-122617-0035_121-121726-0009.png"/>|<img src="wavs/male2female/1320-122612-0010_2094-142345-0048.png"/>|<img src="wavs/male2female/baseline/1320-122617-0035_121-121726-0009_s0.png"/>|<img src="wavs/male2female/ours/1320-122617-0035_121-121726-0009_s0.png"/>|<img src="wavs/male2female/gt/1320-122617-0035_121-121726-0009.png"/>|
-|<audio src="wavs/male2female/5105-28240-0005_6829-68769-0010.wav" controls preload></audio>|<audio src="wavs/male2female/5105-28241-0019_2830-3980-0050.wav" controls preload></audio>|<audio src="wavs/male2female/baseline/5105-28240-0005_6829-68769-0010_s0.wav" controls preload></audio>|<audio src="wavs/male2female/ours/5105-28240-0005_6829-68769-0010_s0.wav" controls preload></audio>|<audio src="wavs/male2female/gt/5105-28240-0005_6829-68769-0010.wav" controls preload></audio>|
-|<img src="wavs/male2female/5105-28240-0005_6829-68769-0010.png"/>|<img src="wavs/male2female/5105-28241-0019_2830-3980-0050.png"/>|<img src="wavs/male2female/baseline/5105-28240-0005_6829-68769-0010_s0.png"/>|<img src="wavs/male2female/ours/5105-28240-0005_6829-68769-0010_s0.png"/>|<img src="wavs/male2female/gt/5105-28240-0005_6829-68769-0010.png"/>|
-|<audio src="wavs/male2female/3570-5695-0010_5105-28240-0015.wav" controls preload></audio>|<audio src="wavs/male2female/5683-32866-0001_5105-28241-0016.wav" controls preload></audio>|<audio src="wavs/male2female/baseline/3570-5695-0010_5105-28240-0015_s1.wav" controls preload></audio>|<audio src="wavs/male2female/ours/3570-5695-0010_5105-28240-0015_s1.wav" controls preload></audio>|<audio src="wavs/male2female/gt/3570-5695-0010_5105-28240-0015.wav" controls preload></audio>|
-|<img src="wavs/male2female/3570-5695-0010_5105-28240-0015.png"/>|<img src="wavs/male2female/5683-32866-0001_5105-28241-0016.png"/>|<img src="wavs/male2female/baseline/3570-5695-0010_5105-28240-0015_s1.png"/>|<img src="wavs/male2female/ours/3570-5695-0010_5105-28240-0015_s1.png"/>|<img src="wavs/male2female/gt/3570-5695-0010_5105-28240-0015.png"/>|
- -->
-<!-- ### Male - Male Mixtures
+|A woman speaks as she rubs two objects together|<audio src="sample3/AudioLoCD.wav" controls preload></audio>|<audio src="sample3/DiffSound.wav" controls preload></audio>|<audio src="sample3/GT.wav" controls preload></audio>|
+|Mel-spectrograms|<img src="sample3/AudioLoCD_mel.png" width="60%" height="60%" />|<img src="sample3/DS_mel.png" width="60%" height="60%" />|<img src="sample3/GT_mel.png" width="60%" height="60%" />|
 
-| <center>speech mixture</center> | <center>enrollment utterance</center> | <center>baseline</center> | <center>proposed methods</center> | <center>ground-truth</center> | 
-| :--- | :--- | :--- | :--- | :--- |
-|<audio src="wavs/male2male/908-31957-0007_5105-28233-0000.wav" controls preload></audio>|<audio src="wavs/male2male/6829-68769-0023_5105-28240-0012.wav" controls preload></audio>|<audio src="wavs/male2male/baseline/908-31957-0007_5105-28233-0000_s1.wav" controls preload></audio>|<audio src="wavs/male2male/ours/908-31957-0007_5105-28233-0000_s1.wav" controls preload></audio>|<audio src="wavs/male2male/gt/908-31957-0007_5105-28233-0000.wav" controls preload></audio>|
-|<img src="wavs/male2male/908-31957-0007_5105-28233-0000.png"/>|<img src="wavs/male2male/6829-68769-0023_5105-28240-0012.png"/>|<img src="wavs/male2male/baseline/908-31957-0007_5105-28233-0000_s1.png"/>|<img src="wavs/male2male/ours/908-31957-0007_5105-28233-0000_s1.png"/>|<img src="wavs/male2male/gt/908-31957-0007_5105-28233-0000.png"/>|
-|<audio src="wavs/male2male/4077-13754-0011_2300-131720-0008.wav" controls preload></audio>|<audio src="wavs/male2male/1188-133604-0029_4077-13751-0006.wav" controls preload></audio>|<audio src="wavs/male2male/baseline/4077-13754-0011_2300-131720-0008_s0.wav" controls preload></audio>|<audio src="wavs/male2male/ours/4077-13754-0011_2300-131720-0008_s0.wav" controls preload></audio>|<audio src="wavs/male2male/gt/4077-13754-0011_2300-131720-0008.wav" controls preload></audio>|
-|<img src="wavs/male2male/4077-13754-0011_2300-131720-0008.png"/>|<img src="wavs/male2male/1188-133604-0029_4077-13751-0006.png"/>|<img src="wavs/male2male/baseline/4077-13754-0011_2300-131720-0008_s0.png"/>|<img src="wavs/male2male/ours/4077-13754-0011_2300-131720-0008_s0.png"/>|<img src="wavs/male2male/gt/4077-13754-0011_2300-131720-0008.png"/>|
-|<audio src="wavs/male2male/61-70968-0014_8224-274384-0003.wav" controls preload></audio>|<audio src="wavs/male2male/1221-135767-0005_61-70970-0020.wav" controls preload></audio>|<audio src="wavs/male2male/baseline/61-70968-0014_8224-274384-0003_s0.wav" controls preload></audio>|<audio src="wavs/male2male/ours/61-70968-0014_8224-274384-0003_s0.wav" controls preload></audio>|<audio src="wavs/male2male/gt/61-70968-0014_8224-274384-0003.wav" controls preload></audio>|
-|<img src="wavs/male2male/61-70968-0014_8224-274384-0003.png"/>|<img src="wavs/male2male/1221-135767-0005_61-70970-0020.png"/>|<img src="wavs/male2male/baseline/61-70968-0014_8224-274384-0003_s0.png"/>|<img src="wavs/male2male/ours/61-70968-0014_8224-274384-0003_s0.png"/>|<img src="wavs/male2male/gt/61-70968-0014_8224-274384-0003.png"/>|
+|A series of light horn beeps is followed by a loud steam whistle|<audio src="sample4/AudioLoCD.wav" controls preload></audio>|<audio src="sample4/DiffSound.wav" controls preload></audio>|<audio src="sample4/GT.wav" controls preload></audio>|
+|Mel-spectrograms|<img src="sample4/AudioLoCD_mel.png" width="60%" height="60%" />|<img src="sample4/DS_mel.png" width="60%" height="60%" />|<img src="sample4/GT_mel.png" width="60%" height="60%" />|
 
-### Female - Female Mixtures
+|An engine runs then a train horn sounds|<audio src="sample5/AudioLoCD.wav" controls preload></audio>|<audio src="sample5/DiffSound.wav" controls preload></audio>|<audio src="sample5/GT.wav" controls preload></audio>|
+|Mel-spectrograms|<img src="sample5/AudioLoCD_mel.png" width="60%" height="60%" />|<img src="sample5/DS_mel.png" width="60%" height="60%" />|<img src="sample5/GT_mel.png" width="60%" height="60%" />|
 
-| <center>speech mixture</center> | <center>enrollment utterance</center> | <center>baseline</center> | <center>proposed methods</center> | <center>ground-truth</center> | 
-| :--- | :--- | :--- | :--- | :--- |
-|<audio src="wavs/female2female/8463-287645-0013_5142-33396-0037.wav" controls preload></audio>|<audio src="wavs/female2female/8463-294828-0013_1221-135767-0021.wav" controls preload></audio>|<audio src="wavs/female2female/baseline/8463-287645-0013_5142-33396-0037_s0.wav" controls preload></audio>|<audio src="wavs/female2female/ours/8463-287645-0013_5142-33396-0037_s0.wav" controls preload></audio>|<audio src="wavs/female2female/gt/8463-287645-0013_5142-33396-0037.wav" controls preload></audio>|
-|<img src="wavs/female2female/8463-287645-0013_5142-33396-0037.png"/>|<img src="wavs/female2female/8463-294828-0013_1221-135767-0021.png"/>|<img src="wavs/female2female/baseline/8463-287645-0013_5142-33396-0037_s0.png"/>|<img src="wavs/female2female/ours/8463-287645-0013_5142-33396-0037_s0.png"/>|<img src="wavs/female2female/gt/8463-287645-0013_5142-33396-0037.png"/>|
-|<audio src="wavs/female2female/237-134500-0002_4970-29093-0019.wav" controls preload></audio>|<audio src="wavs/female2female/4970-29095-0009_5639-40744-0014.wav" controls preload></audio>|<audio src="wavs/female2female/baseline/237-134500-0002_4970-29093-0019_s1.wav" controls preload></audio>|<audio src="wavs/female2female/ours/237-134500-0002_4970-29093-0019_s1.wav" controls preload></audio>|<audio src="wavs/female2female/gt/237-134500-0002_4970-29093-0019.wav" controls preload></audio>|
-|<img src="wavs/female2female/237-134500-0002_4970-29093-0019.png"/>|<img src="wavs/female2female/4970-29095-0009_5639-40744-0014.png"/>|<img src="wavs/female2female/baseline/237-134500-0002_4970-29093-0019_s1.png"/>|<img src="wavs/female2female/ours/237-134500-0002_4970-29093-0019_s1.png"/>|<img src="wavs/female2female/gt/237-134500-0002_4970-29093-0019.png"/>|
-|<audio src="wavs/female2female/4446-2275-0042_3570-5696-0004.wav" controls preload></audio>|<audio src="wavs/female2female/3570-5695-0007_5105-28233-0001.wav" controls preload></audio>|<audio src="wavs/female2female/baseline/4446-2275-0042_3570-5696-0004_s1.wav" controls preload></audio>|<audio src="wavs/female2female/ours/4446-2275-0042_3570-5696-0004_s1.wav" controls preload></audio>|<audio src="wavs/female2female/gt/4446-2275-0042_3570-5696-0004.wav" controls preload></audio>|
-|<img src="wavs/female2female/4446-2275-0042_3570-5696-0004.png"/>|<img src="wavs/female2female/3570-5695-0007_5105-28233-0001.png"/>|<img src="wavs/female2female/baseline/4446-2275-0042_3570-5696-0004_s1.png"/>|<img src="wavs/female2female/ours/4446-2275-0042_3570-5696-0004_s1.png"/>|<img src="wavs/female2female/gt/4446-2275-0042_3570-5696-0004.png"/>|
 
- -->
+|A baby cries and fusses, a woman speaks, and a man speaks|<audio src="sample6/AudioLoCD.wav" controls preload></audio>|<audio src="sample6/DiffSound.wav" controls preload></audio>|<audio src="sample6/GT.wav" controls preload></audio>|
+|Mel-spectrograms|<img src="sample6/AudioLoCD_mel.png" width="60%" height="60%" />|<img src="sample6/DS_mel.png" width="60%" height="60%" />|<img src="sample6/GT_mel.png" width="60%" height="60%" />|
+
+
+|A grown man speaks as water softly runs|<audio src="sample7/AudioLoCD.wav" controls preload></audio>|<audio src="sample7/DiffSound.wav" controls preload></audio>|<audio src="sample7/GT.wav" controls preload></audio>|
+|Mel-spectrograms|<img src="sample7/AudioLoCD_mel.png" width="60%" height="60%" />|<img src="sample7/DS_mel.png" width="60%" height="60%" />|<img src="sample7/GT_mel.png" width="60%" height="60%" />|
+
+
+|A grown man speaks as water softly runs|<audio src="sample8/AudioLoCD.wav" controls preload></audio>|<audio src="sample8/DiffSound.wav" controls preload></audio>|<audio src="sample8/GT.wav" controls preload></audio>|
+|Mel-spectrograms|<img src="sample8/AudioLoCD_mel.png" width="60%" height="60%" />|<img src="sample8/DS_mel.png" width="60%" height="60%" />|<img src="sample8/GT_mel.png" width="60%" height="60%" />|
 
 ### References
 
-[1] Delcroix M, Ochiai T, Zmolikova K, et al. Improving speaker discrimination of target speech extraction with time-domain speakerbeam[C]//ICASSP 2020-2020 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP). IEEE, 2020: 691-695.  
-[2] Cosentino J, Pariente M, Cornell S, et al. Librimix: An open-source dataset for generalizable speech separation[J]. arXiv preprint arXiv:2005.11262, 2020.
+[1] Yang, Dongchao, et al. "Diffsound: Discrete diffusion model for text-to-sound generation." IEEE/ACM Transactions on Audio, Speech, and Language Processing (2023).
