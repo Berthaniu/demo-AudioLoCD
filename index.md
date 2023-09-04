@@ -11,6 +11,7 @@ This is a [demo](https://Berthaniu.github.io/demo-AudioLoCD/) for our paper **_A
 ## Examples
 * **Text input:**
     _A clock ticktocks continuously_
+    
 | <center>Ground-truth</center> | <center>AudioLoCD</center> | <center>DiffSound</center> |
 | :--- | :--- | :--- |
 | <audio src="knock/knocking_mel_sample_2.wav" controls="controls">ERROR</audio>|<audio src="knock/knocking_mel_sample_2.wav" controls="controls">ERROR</audio>|  <audio src="knock/knocking_mel_sample_2.wav" controls="controls">ERROR</audio>|
