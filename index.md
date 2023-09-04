@@ -1,28 +1,33 @@
-# <center> Target Confusion in End-to-end Speaker Extraction: Analysis and Approaches </center>
+# <center> AudioLoCD: An Efficient Conditional Discrete Latent Diffusion Model for Text-to-Audio Generation </center>
 
-<center> Zifeng Zhao<sup>1</sup>, Dongchao Yang<sup>1</sup>, Rongzhi Gu<sup>1</sup>, Haoran Zhang<sup>1</sup>, Yuexian Zou<sup>1,2</sup> </center> 
+<center> Xinlei Niu<sup>1</sup>, Jing Zhang<sup>1</sup>, Christian Walder<sup>2</sup>, Charles Patrick Martin<sup>1</sup> </center> 
  
-<center> 1 Peking University </center>
+<center> 1 Australian National University, Canberra, Australia </center>
 
-<center> 2 Peng Cheng Laboratory</center>
+<center> 2 Google DeepMind, Montreal, Canada</center>
 
 ## Introduction
-This is a [demo](https://zhazhafon.github.io/demo-confusion/) for our paper **_Target Confusion in End-to-end Speaker Extraction: Analysis and Approaches_**. In the following, we will show some cases in which the baseline model comes across with **_target confusion problem_**, and compare them with our results.
-
+This is a [demo](https://Berthaniu.github.io/demo-AudioLoCD/) for our paper **_AudioLoCD: An Efficient Conditional Discrete Latent Diffusion Model for Text-to-Audio Generation_**. 
 ## Examples
+* **Text input:**
+    _A clock ticktocks continuously_
+| <center>Ground-truth</center> | <center>AudioLoCD</center> | <center>DiffSound</center> |
+| :--- | :--- | :--- |
+| <audio src="knock/knocking_mel_sample_2.wav" controls="controls">ERROR</audio>|<audio src="knock/knocking_mel_sample_2.wav" controls="controls">ERROR</audio>|  <audio src="knock/knocking_mel_sample_2.wav" controls="controls">ERROR</audio>|
 
-### Female - Male Mixtures
+<!-- ### Female - Male Mixtures
 
 | <center>speech mixture</center> | <center>enrollment utterance</center> | <center>baseline</center> | <center>proposed methods</center> | <center>ground-truth</center> | 
 | :--- | :--- | :--- | :--- | :--- |
+| <audio src="knock/knocking_mel_sample_2.wav" controls="controls">ERROR</audio>|  <audio src="knock/knocking_mel_sample_2.wav" controls="controls">ERROR</audio>|  <audio src="knock/knocking_mel_sample_2.wav" controls="controls">ERROR</audio>|
 |<audio src="wavs/male2female/1320-122617-0035_121-121726-0009.wav" controls preload></audio>|<audio src="wavs/male2female/1320-122612-0010_2094-142345-0048.wav" controls preload></audio>|<audio src="wavs/male2female/baseline/1320-122617-0035_121-121726-0009_s0.wav" controls preload></audio>|<audio src="wavs/male2female/ours/1320-122617-0035_121-121726-0009_s0.wav" controls preload></audio>|<audio src="wavs/male2female/gt/1320-122617-0035_121-121726-0009.wav" controls preload></audio>|
 |<img src="wavs/male2female/1320-122617-0035_121-121726-0009.png"/>|<img src="wavs/male2female/1320-122612-0010_2094-142345-0048.png"/>|<img src="wavs/male2female/baseline/1320-122617-0035_121-121726-0009_s0.png"/>|<img src="wavs/male2female/ours/1320-122617-0035_121-121726-0009_s0.png"/>|<img src="wavs/male2female/gt/1320-122617-0035_121-121726-0009.png"/>|
 |<audio src="wavs/male2female/5105-28240-0005_6829-68769-0010.wav" controls preload></audio>|<audio src="wavs/male2female/5105-28241-0019_2830-3980-0050.wav" controls preload></audio>|<audio src="wavs/male2female/baseline/5105-28240-0005_6829-68769-0010_s0.wav" controls preload></audio>|<audio src="wavs/male2female/ours/5105-28240-0005_6829-68769-0010_s0.wav" controls preload></audio>|<audio src="wavs/male2female/gt/5105-28240-0005_6829-68769-0010.wav" controls preload></audio>|
 |<img src="wavs/male2female/5105-28240-0005_6829-68769-0010.png"/>|<img src="wavs/male2female/5105-28241-0019_2830-3980-0050.png"/>|<img src="wavs/male2female/baseline/5105-28240-0005_6829-68769-0010_s0.png"/>|<img src="wavs/male2female/ours/5105-28240-0005_6829-68769-0010_s0.png"/>|<img src="wavs/male2female/gt/5105-28240-0005_6829-68769-0010.png"/>|
 |<audio src="wavs/male2female/3570-5695-0010_5105-28240-0015.wav" controls preload></audio>|<audio src="wavs/male2female/5683-32866-0001_5105-28241-0016.wav" controls preload></audio>|<audio src="wavs/male2female/baseline/3570-5695-0010_5105-28240-0015_s1.wav" controls preload></audio>|<audio src="wavs/male2female/ours/3570-5695-0010_5105-28240-0015_s1.wav" controls preload></audio>|<audio src="wavs/male2female/gt/3570-5695-0010_5105-28240-0015.wav" controls preload></audio>|
 |<img src="wavs/male2female/3570-5695-0010_5105-28240-0015.png"/>|<img src="wavs/male2female/5683-32866-0001_5105-28241-0016.png"/>|<img src="wavs/male2female/baseline/3570-5695-0010_5105-28240-0015_s1.png"/>|<img src="wavs/male2female/ours/3570-5695-0010_5105-28240-0015_s1.png"/>|<img src="wavs/male2female/gt/3570-5695-0010_5105-28240-0015.png"/>|
-
-### Male - Male Mixtures
+ -->
+<!-- ### Male - Male Mixtures
 
 | <center>speech mixture</center> | <center>enrollment utterance</center> | <center>baseline</center> | <center>proposed methods</center> | <center>ground-truth</center> | 
 | :--- | :--- | :--- | :--- | :--- |
@@ -44,14 +49,7 @@ This is a [demo](https://zhazhafon.github.io/demo-confusion/) for our paper **_T
 |<audio src="wavs/female2female/4446-2275-0042_3570-5696-0004.wav" controls preload></audio>|<audio src="wavs/female2female/3570-5695-0007_5105-28233-0001.wav" controls preload></audio>|<audio src="wavs/female2female/baseline/4446-2275-0042_3570-5696-0004_s1.wav" controls preload></audio>|<audio src="wavs/female2female/ours/4446-2275-0042_3570-5696-0004_s1.wav" controls preload></audio>|<audio src="wavs/female2female/gt/4446-2275-0042_3570-5696-0004.wav" controls preload></audio>|
 |<img src="wavs/female2female/4446-2275-0042_3570-5696-0004.png"/>|<img src="wavs/female2female/3570-5695-0007_5105-28233-0001.png"/>|<img src="wavs/female2female/baseline/4446-2275-0042_3570-5696-0004_s1.png"/>|<img src="wavs/female2female/ours/4446-2275-0042_3570-5696-0004_s1.png"/>|<img src="wavs/female2female/gt/4446-2275-0042_3570-5696-0004.png"/>|
 
-### Links
-
-[[Paper](https://arxiv.org/abs/2204.01355)] [[Bibtex](bib.txt)] [[Demo GitHub](https://github.com/ZhaZhaFon/demo-confusion)]
-
-### News
-
-* 2022-06-15 Paper accepted by INTERSPEECH 2022  
-* 2022-04-15 Paper available on arXiv
+ -->
 
 ### References
 
