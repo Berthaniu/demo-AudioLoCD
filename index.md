@@ -20,8 +20,8 @@ This is a [demo](https://Berthaniu.github.io/demo-AudioLoCD/) for our paper **_A
 |Food is frying then a woman speaks|<audio src="sample1/AudioLoCD.wav" controls preload></audio>|<audio src="sample1/DiffSound.wav" controls preload></audio>|<audio src="sample1/GT.wav" controls preload></audio>|
 |Mel-spectrograms|<img src="sample1/AudioLoCD_mel.png" width="60%" height="60%" />|<img src="sample1/DS_mel.png" width="60%" height="60%" />|<img src="sample1/GT_mel.png" width="60%" height="60%" />|
 
-|Speaking following by laughing and clapping|<audio src="sample1/AudioLoCD.wav" controls preload></audio>|<audio src="sample1/DiffSound.wav" controls preload></audio>|<audio src="sample1/GT.wav" controls preload></audio>|
-|Mel-spectrograms|<img src="sample1/AudioLoCD_mel.png" width="60%" height="60%" />|<img src="sample1/DS_mel.png" width="60%" height="60%" />|<img src="sample1/GT_mel.png" width="60%" height="60%" />|
+|Speaking following by laughing and clapping|<audio src="sample2/AudioLoCD.wav" controls preload></audio>|<audio src="sample2/DiffSound.wav" controls preload></audio>|<audio src="sample2/GT.wav" controls preload></audio>|
+|Mel-spectrograms|<img src="sample2/AudioLoCD_mel.png" width="60%" height="60%" />|<img src="sample2/DS_mel.png" width="60%" height="60%" />|<img src="sample2/GT_mel.png" width="60%" height="60%" />|
 
 |A woman speaks as she rubs two objects together|<audio src="sample3/AudioLoCD.wav" controls preload></audio>|<audio src="sample3/DiffSound.wav" controls preload></audio>|<audio src="sample3/GT.wav" controls preload></audio>|
 |Mel-spectrograms|<img src="sample3/AudioLoCD_mel.png" width="60%" height="60%" />|<img src="sample3/DS_mel.png" width="60%" height="60%" />|<img src="sample3/GT_mel.png" width="60%" height="60%" />|
