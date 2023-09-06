@@ -1,4 +1,4 @@
-# <center> AudioLoCD: An Efficient Conditional Discrete Latent Diffusion Model for Text-to-Audio Generation </center>
+# <center> AudioLoCD: An Efficient Conditional Discrete Contrastive Latent Diffusion Model for Text-to-Audio Generation </center>
 
 <center> Xinlei Niu<sup>1</sup>, Jing Zhang<sup>1</sup>, Christian Walder<sup>2</sup>, Charles Patrick Martin<sup>1</sup> </center> 
  
