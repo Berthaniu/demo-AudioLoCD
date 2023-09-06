@@ -10,9 +10,8 @@
 We present the AudioLoCD, a novel text-to-audio (TTA) generation framework, which incorporates a LoRA-based conditional discrete contrastive latent diffusion model. Unlike recent large-scale TTA models, our AudioLoCD can be efficiently trained under limited computational resources. The integration of a contrastive learning strategy enhances the connection between textual conditions and the generated audio outputs, resulting in coherent performance. Our experiments demonstrate that AudioLoCD outperforms the baseline with greatly reduced computational resources. Furthermore, a comprehensive ablation study validates the contribution of each component within the AudioLoCD.
 
 ## Architecture
+<center><img src="Figure/AudioLoCD.png" width="80%" height="80%" /></center>
 
-TBD
-<!-- <center><img src="Figure/AudioLoCD.png" width="80%" height="80%" /></center> -->
 
 ## The comprarison between generated sample by AudioLoCD, DiffSound[1] (baseline), and Ground Truth (Source audio)
 <!-- ### The comprarison between generated sample by AudioLoCD, DiffSound[1] (baseline), and Ground Truth -->
