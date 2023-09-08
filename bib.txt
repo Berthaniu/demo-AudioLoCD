@@ -1,4 +1,5 @@
-@INPROCEEDINGS{niu2023AudioLoCD,
+@INPROCEEDINGS{niu2023soundlocd,
   author={Niu, Xinlei, Jing Zhang, Christian Walder, and Charles Patrick Martin}
-  title={AudioLoCD: An Efficient Conditional Discrete Latent Diffusion Model for Text-to-Audio Generation}, 
-  year={2023},
+  title={SoundLoCD: An Efficient Conditional Discrete Contrastive Latent Diffusion Model for Text-to-Sound Generation}, 
+  year={2023}
+}
