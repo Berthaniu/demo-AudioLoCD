@@ -10,7 +10,7 @@
 We present the SoundLoCD, a novel text-to-sound generation framework, which incorporates a LoRA-based conditional discrete contrastive latent diffusion model. Unlike recent large-scale sound generation models, our method can be efficiently trained under limited computational resources. The integration of a contrastive learning strategy further enhances the connection between textual conditions and the generated outputs, resulting in coherent and high-fidelity performance. Our experiments demonstrate that SoundLoCD outperforms the baseline with greatly reduced computational resources. A comprehensive ablation study further validates the contribution of each component within the SoundLoCD.
 
 ## Architecture
-<center><img src="Figure/AudioLoCD.png" width="80%" height="80%" /></center>
+<center><img src="Figure/ICASSP_final.png" width="80%" height="80%" /></center>
 
 
 ## The comprarison between generated sample by SoundLoCD, DiffSound[1] (baseline), and Ground Truth (Source audio)
